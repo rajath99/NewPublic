@@ -44,6 +44,16 @@ const resetMessage  =()=>{
                 fd.append("email",values.email)
                 fd.append("owner_name",values.owner_name)
                 fd.append("password", values.password)
+
+                // --- START OF DEBUGGING CHANGES ---
+                const specificEndpoint = "/school/register"; // The specific part for this call
+                const finalApiUrl = `${baseUrl}${specificEndpoint}`;
+
+                console.log("REGISTER.JSX: 'baseUrl' received from environment.js:", baseUrl);
+                console.log("REGISTER.JSX: 'specificEndpoint' for this call:", specificEndpoint);
+                console.log("REGISTER.JSX: Attempting API call to final URL:", finalApiUrl);
+
+
                
                 axios.post(`${baseUrl}/school/register`,fd).then(resp=>{
                     console.log("Response register submit")

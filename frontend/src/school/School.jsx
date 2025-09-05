@@ -32,6 +32,8 @@ import RecentActorsIcon from '@mui/icons-material/RecentActors';
 import ExplicitIcon from '@mui/icons-material/Explicit';
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 import LogoutIcon from '@mui/icons-material/Logout';
+// At the top of School.jsx, with the other icon imports
+import DescriptionIcon from '@mui/icons-material/Description';
 
 const drawerWidth = 240;
 
@@ -128,7 +130,8 @@ export default function School() {
         { link: "/school/attendance", component: "Attendance", icon: RecentActorsIcon },
         { link: "/school/examinations", component: "Examinations", icon: ExplicitIcon},
         {link:"/school/notice", component:"Notice", icon:CircleNotificationsIcon},
-        {link:"/logout", component:"Log Out", icon:LogoutIcon}
+        {link:"/logout", component:"Log Out", icon:LogoutIcon},
+        { link: "/school/daily-lesson-plan", component: "Lesson Plan", icon: DescriptionIcon }
     ]
     const navigate = useNavigate();
     const handleNavigation = (link) => {

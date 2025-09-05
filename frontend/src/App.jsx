@@ -44,6 +44,9 @@ import darkTheme from "./basic utility components/darkTheme";
 import lightTheme from "./basic utility components/lightTheme";
 import ThemeToggleButton from "./basic utility components/ThemeToggleButton";
 import { useContext, useEffect, useState } from "react";
+import DailyLessonPlan from "./school/components/lesson-plan/DailyLessonPlan";
+
+
 
 function App() {
   const { authenticated, login,themeDark } = useContext(AuthContext);
@@ -68,6 +71,7 @@ function App() {
               <Route path="attendance-student/:studentId" element={<AttendanceDetails />} />
               <Route path="examinations" element={<Examinations />} />
               <Route path="notice" element={<NoticeSchool/>} />
+              <Route path="daily-lesson-plan" element={<DailyLessonPlan />} />
             </Route>
   
             <Route path="student"  element={<ProtectedRoute allowedRoles={['STUDENT']}><Student/></ProtectedRoute>}>

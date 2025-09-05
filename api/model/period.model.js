@@ -9,6 +9,11 @@ const periodSchema = new mongoose.Schema({
   startTime: { type: Date, required: true,},
   endTime: { type: Date,  required: true,
   },
+  workType: {
+        type: String,
+        required: true,
+        enum: ['T.B', 'C.W', 'T.B+C.W'], // Optional: Enforces only these values
+    },
 }, { timestamps: true });
 
 module.exports = mongoose.model('Period', periodSchema);
