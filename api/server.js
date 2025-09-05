@@ -22,6 +22,13 @@ const lessonPlanRoutes = require('./router/lessonPlanRoutes');
 
 const app = express();
 
+app.use(cors({
+  origin: ["https://new-public-seven.vercel.app"], 
+  credentials: true
+}));
+
+
+
 // middleware 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
